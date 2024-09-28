@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("./bkimg2.jpeg");
+  background-position: center;
+  width:100%;
+  background-size: cover;
+}
+
+.app-container {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.task-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.task-form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 20%;
+}
+
+.task-form input[type="text"] {
+  width: 30%;
+}
+
+.task-form .add-task-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filters {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filters button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.filters button:hover {
+  background-color: #ddd;
+}
+
+.task-list {
+  list-style: none;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.task-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.task-category {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.task-deadline {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.task-actions .action-btn {
+  margin: 0 5px;
+  padding: 5px;
+  font-size: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.task-actions .edit-btn i {
+  color: #007BFF;
+}
+
+.task-actions .delete-btn i {
+  color: #dc3545;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f5f5f5;
+}
+
+.pagination button:hover {
+  background-color: #ddd;
+}
+
+
+
+
+
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Slide up effect */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the fade-in effect to new tasks */
+.task {
+  animation: fadeIn 0.5s ease-out; /* Duration and easing */
+  opacity: 1;
+}
+
+
+
+
+
+
+
+/* Keyframe for fade-out and shrink effect */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* JavaScript function to animate deletion */
+
+
+
+
+
+
+
+
+
+
+
+/* Button hover animation - subtle scale and color change */
+button:hover {
+  background-color: #3949ab; /* Darker blue */
+  transform: scale(1.05); /* Slightly increase size */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Edit and Delete button hover effects */
+.task-actions .action-btn:hover i {
+  color: #d32f2f; /* Change color to red */
+  transform: scale(1.1); /* Slight increase in icon size */
+  transition: transform 0.2s, color 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+/* Keyframes for slide in effect */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Keyframes for slide out effect */
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+/* Apply sliding animation when rendering tasks */
+.task-list {
+  animation: slideIn 0.5s ease-out;
+}
+
