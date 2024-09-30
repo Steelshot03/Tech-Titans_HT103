@@ -10,7 +10,7 @@ const pagination = document.getElementById('pagination');
 // Array to store tasks
 let tasks = [];
 let currentPage = 1;
-const tasksPerPage = 3; // Number of tasks per page
+const tasksPerPage = 2; // Number of tasks per page
 
 // Function to add a task
 function addTask() {
