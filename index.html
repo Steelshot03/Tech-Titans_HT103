@@ -23,7 +23,13 @@
 
     <div class="task-form">
       <input type="text" placeholder="Enter a task..." id="task-input" />
-      <input type="text" placeholder="Category (e.g. Work, Personal)" id="category-input" />
+      <select id="category-input" name="category">
+        <option value="">--Select a category--</option>
+        <option value="All">All</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
       <input type="date" id="deadline-input-date" />
       <input type="time" id="deadline-input-time" /> <!-- New Time Input -->
       <button class="add-task-btn" onclick="addTask()">Add Task</button>
@@ -44,4 +50,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
